@@ -54,17 +54,10 @@ const allowedOrigins = [
   ];
   
   app.use(cors({
-    origin: function (origin, callback) {
-      // Allow requests with no origin (like mobile apps or curl)
-      if (!origin) return callback(null, true);
-      if (allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      } else {
-        return callback(new Error("Not allowed by CORS"));
-      }
-    },
-    credentials: true
+    origin: ["http://localhost:3001", "https://padharo-gujrat.vercel.app"],
+    credentials: true,
   }));
+  
   
 app.use("/uploads", express.static("uploads"));
 
