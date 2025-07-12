@@ -56,9 +56,10 @@ const allowedOrigins = [
   ];
   
   app.use(cors({
-    origin: ["http://localhost:3001", "https://padharo-gujrat.vercel.app"],
+    origin: allowedOrigins,
     credentials: true,
   }));
+  
   
   
 app.use("/uploads", express.static("uploads"));
