@@ -51,7 +51,8 @@ app.use(cookieParser());
 const allowedOrigins = [
     "http://localhost:3001",
     "https://padharo-gujrat.vercel.app",
-    "https://padharo-gujrat-k0tnq43n4-vasara-lilus-projects.vercel.app"
+    "https://padharo-gujrat-k0tnq43n4-vasara-lilus-projects.vercel.app",
+    "https://padharo-gujrat-qqrajyqaj-vasara-lilus-projects.vercel.app"
   ];
   
   app.use(cors({
