@@ -71,7 +71,7 @@ app.use(cookieParser());
 //   app.use(cors(corsOptions));
   
 app.use(cors({
-  origin: "https://padharo-gujrat-qqrajyqaj-vasara-lilus-projects.vercel.app",
+  origin: "https://padharo-gujrat-lv08w4dd6-vasara-lilus-projects.vercel.app",
   credentials: true,
 }));
 
