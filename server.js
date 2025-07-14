@@ -60,7 +60,8 @@ const allowedOrigins = [
     origin: [
       "http://localhost:3001",
       "https://padharo-gujrat.vercel.app",
-      "https://padharo-gujrat-lv08w4dd6-vasara-lilus-projects.vercel.app"
+      "https://padharo-gujrat-lv08w4dd6-vasara-lilus-projects.vercel.app",
+      "https://padharo-gujrat-8knekb67l-vasara-lilus-projects.vercel.app"
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
