@@ -48,33 +48,25 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
-// const allowedOrigins = [
-//     "http://localhost:3001",
-//     "https://padharo-gujrat.vercel.app",
-//     "https://padharo-gujrat-k0tnq43n4-vasara-lilus-projects.vercel.app",
-//     "https://padharo-gujrat-qqrajyqaj-vasara-lilus-projects.vercel.app"
-//   ];
+const allowedOrigins = [
+    "http://localhost:3001",
+    "https://padharo-gujrat.vercel.app",
+    "https://padharo-gujrat-k0tnq43n4-vasara-lilus-projects.vercel.app",
+    "https://padharo-gujrat-qqrajyqaj-vasara-lilus-projects.vercel.app",
+    "https://padharo-gujrat-lv08w4dd6-vasara-lilus-projects.vercel.app"
+  ];
   
-//   const corsOptions = {
-//     origin: function (origin, callback) {
-//       // Allow requests with no origin (like mobile apps or curl)
-//       if (!origin) return callback(null, true);
-//       if (allowedOrigins.includes(origin)) {
-//         callback(null, true);
-//       } else {
-//         callback(new Error("Not allowed by CORS: " + origin));
-//       }
-//     },
-//     credentials: true,
-//   };
+  app.use(cors({
+    origin: [
+      "http://localhost:3001",
+      "https://padharo-gujrat.vercel.app",
+      "https://padharo-gujrat-lv08w4dd6-vasara-lilus-projects.vercel.app"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  }));
   
-//   app.use(cors(corsOptions));
-  
-app.use(cors({
-  origin: "https://padharo-gujrat-lv08w4dd6-vasara-lilus-projects.vercel.app",
-  credentials: true,
-}));
-
   
   
 app.use("/uploads", express.static("uploads"));
